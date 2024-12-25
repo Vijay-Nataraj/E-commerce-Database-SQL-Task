@@ -345,11 +345,15 @@ ORDER BY price DESC
 LIMIT 3;
 ```
 
+---
+
 | name      | price |
 | --------- | ----- |
 | Product H | 60.00 |
 | Product J | 45.00 |
 | Product C | 45.00 |
+
+---
 
 - Normalize the database by creating a separate table for order items and updating the orders table to reference the order_items table.
 
@@ -408,10 +412,14 @@ WHERE p.name = 'Product A';
 ;
 ```
 
+---
+
 | name      |
 | --------- |
 | John Doe  |
 | Eve Green |
+
+---
 
 - Join the orders and customers tables to retrieve the customer's name and order date for each order.
 
@@ -421,6 +429,8 @@ FROM customers c
 JOIN orders o ON c.id = o.customer_id;
 ;
 ```
+
+---
 
 | name          | order_date |
 | ------------- | ---------- |
@@ -435,6 +445,8 @@ JOIN orders o ON c.id = o.customer_id;
 | Grace Yellow  | 2024-12-17 |
 | Hank Red      | 2024-11-28 |
 
+---
+
 -Retrieve the orders with a total amount greater than 150.00.
 
 ```sql
@@ -443,11 +455,15 @@ FROM orders o
 WHERE total_amount >= 150.00;
 ```
 
+---
+
 | id  | customer_id | order_date | total_amount |
 | --- | ----------- | ---------- | ------------ |
 | 2   | 2           | 2024-12-18 | 200.00       |
 | 3   | 3           | 2024-11-10 | 150.00       |
 | 4   | 4           | 2024-12-22 | 300.00       |
+
+---
 
 - Retrieve the average total of all orders.
 
@@ -456,9 +472,13 @@ SELECT AVG(total_amount) AS average_order_total
 FROM orders;
 ```
 
+---
+
 | average_order_total |
 | ------------------- |
 | 126.000000          |
+
+---
 
 ## Contributing
 
