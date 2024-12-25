@@ -262,6 +262,8 @@ JOIN orders o ON c.id = o.customer_id
 GROUP BY c.id;
 ```
 
+---
+
 | id  | name          | total_amount |
 | --- | ------------- | ------------ |
 | 1   | John Doe      | 100.00       |
@@ -274,6 +276,8 @@ GROUP BY c.id;
 | 8   | Frank Blue    | 60.00        |
 | 9   | Grace Yellow  | 110.00       |
 | 10  | Hank Red      | 50.00        |
+
+---
 
 - Update the price of Product C to 45.00.
 
